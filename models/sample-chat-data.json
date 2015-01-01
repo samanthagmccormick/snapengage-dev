@@ -1,0 +1,330 @@
+[
+  {
+    "id":"4461a7ed-ac49-4ac2-bef5-7f44339dadf6",
+    "url":"https://www.snapengage.com/viewcase?c\u003d4461a7ed-ac49-4ac2-bef5-7f44339dadf6",
+    "type":"chat",
+    "requested_by":"crazy4cats@kittymail.com",
+    "description":"Hi I have a question about your kitty spaceships?",
+    "created_at":1407386137,
+    "page_url":"http://www.awesome3ftcakes.com/menu.html",
+    "referrer_url":"http://www.bing.com/search?q\u003dawesome+3ft+cakes\u0026qs\u003dLC\u0026pq\u003dawesome+3ft\u0026sc\u003d1-11\u0026sp\u003d1\u0026cvid\u003d7da2f2e5e8e341ef9540483e95270a6c\u0026FORM\u003dQBLH",
+    "entry_url":"http://www.awesome3ftcakes.com/menu.html",
+    "ip_address":"76.120.72.193",
+    "user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:31.0) Gecko/20100101 Firefox/31.0",
+    "country":"United States",
+    "region":"CO",
+    "city":"Boulder",
+    "latitude":40.014984,
+    "longitude":-105.270546,
+    "chat_waittime":17,
+    "chat_duration":18,
+    "survey_score":100,
+    "language_code":"en-us,en;q\u003d0.5",
+    "transcript":[
+      {
+        "id":"",
+        "date":1407386139,
+        "alias":"",
+        "message":"Hi I have a question about your kitty spaceships?"
+      },
+      {
+        "id":"wc:chris+demo@snapengage.com",
+        "date":1407386156,
+        "alias":"Chris",
+        "message":"Hi Mia! Great to see you again!"
+      }
+    ]
+  },
+  {
+    "id":"be891896-6abc-4d3d-b48a-0be9c8257987",
+    "url":"https://www.snapengage.com/viewcase?c\u003dbe891896-6abc-4d3d-b48a-0be9c8257987",
+    "type":"chat",
+    "requested_by":"unknown@example.com",
+    "description":"Hello",
+    "created_at":1406738364,
+    "page_url":"http://www.awesome3ftcakes.com/index.html",
+    "referrer_url":"",
+    "entry_url":"http://www.awesome3ftcakes.com/about.html",
+    "ip_address":"107.161.31.37",
+    "user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:30.0) Gecko/20100101 Firefox/30.0",
+    "country":"United States",
+    "region":"GA",
+    "city":"Marietta",
+    "latitude":33.952602,
+    "longitude":-84.549934,
+    "chat_waittime":8,
+    "chat_duration":246,
+    "survey_score":100,
+    "survey_comments":"Best chat of my life!",
+    "language_code":"en-us,en;q\u003d0.5",
+    "transcript":[
+      {
+        "id":"wc:chris.vieville@snapengage.com",
+        "date":1406738366,
+        "alias":"Chris",
+        "message":"Hi there! I see you are coming from the U.S. We do ship there, is there anything I can help with?  "
+      },
+      {
+        "id":"",
+        "date":1406738366,
+        "alias":"",
+        "message":"Hello"
+      },
+      {
+        "id":"wc:chris.vieville@snapengage.com",
+        "date":1406738373,
+        "alias":"Chris",
+        "message":"Hello there!"
+      },
+      {
+        "id":"",
+        "date":1406738384,
+        "alias":"",
+        "message":"How are you?"
+      },
+      {
+        "id":"wc:chris.vieville@snapengage.com",
+        "date":1406738390,
+        "alias":"Chris",
+        "message":"Great thank you!"
+      },
+      {
+        "id":"wc:chris.vieville@snapengage.com",
+        "date":1406738418,
+        "alias":"Chris",
+        "message":"May I ask who this is?"
+      },
+      {
+        "id":"",
+        "date":1406738445,
+        "alias":"",
+        "message":"This is Ned Stark!"
+      },
+      {
+        "id":"wc:chris.vieville@snapengage.com",
+        "date":1406738466,
+        "alias":"Chris",
+        "message":"Wow! Back from the dead eh, Ned?!"
+      },
+      {
+        "id":"",
+        "date":1406738574,
+        "alias":"",
+        "message":"Well I can\u0027t leave all that to Catelyn now can I!?"
+      },
+      {
+        "id":"",
+        "date":1406738610,
+        "alias":"",
+        "message":"Oh gotta run! The Others are about"
+      }
+    ]
+  },
+  {
+    "id":"9e9ce410-22b1-492e-b622-3584034bbfc8",
+    "url":"https://www.snapengage.com/viewcase?c\u003d9e9ce410-22b1-492e-b622-3584034bbfc8",
+    "type":"chat",
+    "requested_by":"jan@worath.com",
+    "description":"test",
+    "created_at":1401107043,
+    "page_url":"http://www.awesome3ftcakes.com/booking.html",
+    "referrer_url":"http://www.bing.com/search?q\u003dawesome3ftcakes\u0026qs\u003dAS\u0026pq\u003dawesome3f\u0026sc\u003d1-9\u0026sp\u003d1\u0026FORM\u003dQBLH\u0026cvid\u003dd06652613050467eb876c1d9eda9d60a",
+    "entry_url":"http://www.awesome3ftcakes.com/",
+    "ip_address":"37.5.5.206",
+    "user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36",
+    "country":"Germany",
+    "region":"BE",
+    "city":"Berlin",
+    "latitude":52.520008,
+    "longitude":13.404954,
+    "chat_waittime":34,
+    "chat_duration":35,
+    "language_code":"en-US,en;q\u003d0.8,de;q\u003d0.6",
+    "transcript":[
+      {
+        "id":"",
+        "date":1401107045,
+        "alias":"",
+        "message":"Is this thing working?"
+      },
+      {
+        "id":"wc:jan+demo@snapengage.com",
+        "date":1401107079,
+        "alias":"Jan",
+        "message":"hi"
+      }
+    ]
+  },
+  {
+    "id":"541e2436-e5dc-45d8-8bd6-246736023f0d",
+    "url":"https://www.snapengage.com/viewcase?c\u003d541e2436-e5dc-45d8-8bd6-246736023f0d",
+    "type":"chat",
+    "requested_by":"test@test.com",
+    "description":"Hi ",
+    "created_at":1401300872,
+    "page_url":"http://www.awesome3ftcakes.com/index.html",
+    "referrer_url":"",
+    "entry_url":"http://www.awesome3ftcakes.com/about.html",
+    "ip_address":"76.120.72.193",
+    "user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:29.0) Gecko/20100101 Firefox/29.0",
+    "country":"United States",
+    "region":"CO",
+    "city":"Boulder",
+    "latitude":40.014984,
+    "longitude":-105.270546,
+    "chat_waittime":21,
+    "chat_duration":1821,
+    "survey_score":100,
+    "language_code":"en-us,en;q\u003d0.5",
+    "transcript":[
+      {
+        "id":"wc:chris+demo@snapengage.com",
+        "date":1401300874,
+        "alias":"Chris",
+        "message":"Thank you for visiting Awesome 3ft Cakes! I see you are looking for an awesome 3ft cake in Boulder, I can help with that. "
+      },
+      {
+        "id":"",
+        "date":1401300874,
+        "alias":"",
+        "message":"Hi "
+      },
+      {
+        "id":"wc:chris+demo@snapengage.com",
+        "date":1401300894,
+        "alias":"Chris",
+        "message":"Hi!"
+      },
+      {
+        "id":"",
+        "date":1401301278,
+        "alias":"",
+        "message":"I love to eat cake!"
+      },
+      {
+        "id":"",
+        "date":1401301279,
+        "alias":"",
+        "message":"How is your weather today?"
+      },
+      {
+        "id":"",
+        "date":1401301280,
+        "alias":"",
+        "message":"What is your favorite color?"
+      },
+      {
+        "id":"wc:chris+demo@snapengage.com",
+        "date":1401301347,
+        "alias":"Chris",
+        "message":"Are you there?"
+      },
+      {
+        "id":"wc:chris+demo@snapengage.com",
+        "date":1401301784,
+        "alias":"Chris",
+        "message":"http://help.snapengage.com/custom-design-make-it-your-own-with-our-looknfeel-option/"
+      },
+      {
+        "id":"",
+        "date":1401301794,
+        "alias":"",
+        "message":"Very nice chat you have here"
+      },
+      {
+        "id":"wc:chris+demo@snapengage.com",
+        "date":1401301828,
+        "alias":"Chris",
+        "message":"That is a very nice hat you are wearing ;)"
+      },
+      {
+        "id":"wc:chris+demo@snapengage.com",
+        "date":1401302186,
+        "alias":"Chris",
+        "message":"Pancakes"
+      },
+      {
+        "id":"",
+        "date":1401302211,
+        "alias":"",
+        "message":"waffles?"
+      },
+      {
+        "id":"wc:chris+demo@snapengage.com",
+        "date":1401302314,
+        "alias":"Chris",
+        "message":"Why yes! As a matter of fact we do have waffles, let me show you."
+      },
+      {
+        "id":"wc:chris+demo@snapengage.com",
+        "date":1401302502,
+        "alias":"Chris",
+        "message":":)"
+      }
+    ]
+  },
+  {
+    "id":"d4a0a65c-e761-4374-beb6-167be4dd28bb",
+    "url":"https://www.snapengage.com/viewcase?c\u003dd4a0a65c-e761-4374-beb6-167be4dd28bb",
+    "type":"offline",
+    "requested_by":"support@snapengage.com",
+    "description":"Hello, I had a question regarding your site. Can you contact me when you get a chance? Thanks! ",
+    "created_at":1398361373,
+    "page_url":"http://awesome3ftcakes.com/about.html",
+    "referrer_url":"",
+    "entry_url":"http://awesome3ftcakes.com/",
+    "ip_address":"67.176.56.29",
+    "user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36",
+    "country":"United States",
+    "region":"CO",
+    "city":"Boulder",
+    "latitude":40.0496,
+    "longitude":-105.2769,
+    "chat_waittime":0,
+    "chat_duration":0,
+    "language_code":"en-US,en;q\u003d0.8,es;q\u003d0.6,es-419;q\u003d0.4"
+  },
+  {
+    "id":"988b2b0c-f853-428b-b878-6672f120e8b2",
+    "url":"https://www.snapengage.com/viewcase?c\u003d988b2b0c-f853-428b-b878-6672f120e8b2",
+    "type":"chat",
+    "requested_by":"unknown@example.com",
+    "description":"n/a",
+    "created_at":1398855399,
+    "page_url":"http://awesome3ftcakes.com/menu.html",
+    "referrer_url":"",
+    "entry_url":"http://awesome3ftcakes.com/",
+    "ip_address":"91.64.240.213",
+    "user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36",
+    "country":"Germany",
+    "region":"BE",
+    "city":"Berlin",
+    "latitude":52.520008,
+    "longitude":13.404954,
+    "chat_waittime":12,
+    "chat_duration":22,
+    "survey_score":20,
+    "survey_comments":"you suck!",
+    "language_code":"de-DE,de;q\u003d0.8,en-US;q\u003d0.6,en;q\u003d0.4",
+    "transcript":[
+      {
+        "id":"wc:aaron.bergemann@snapengage.com",
+        "date":1398855413,
+        "alias":"Aaron B",
+        "message":"Hi"
+      },
+      {
+        "id":"wc:aaron.bergemann@snapengage.com",
+        "date":1398855417,
+        "alias":"Aaron B",
+        "message":"Do you like cakes?"
+      },
+      {
+        "id":"",
+        "date":1398855421,
+        "alias":"",
+        "message":"Why yes I do!"
+      }
+    ]
+  }
+]
