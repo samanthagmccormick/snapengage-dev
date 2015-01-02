@@ -17,7 +17,7 @@ var indexController = {
 		console.log(chats[0]);
 
 		for (var i = 0; i < chats.length; i++){
-			// Only want to send the chats that have full transcripts.
+			// Only want to send the chats that have transcripts.
 			if (chats[i].transcript) {
 				data.push(chats[i]);
 			}

@@ -7,3 +7,45 @@
 	color: blue;
 	font-weight: 800;
 }
+
+li {
+	list-style-type: none;
+}
+
+.carat {
+	margin: 0 20px 0 0;
+	color: #193140;
+}
+
+.openCarat {
+	-ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+.closeCarat {
+	-ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+}
+
+.heading {
+	font-weight: 800;
+	color: #fff;
+}
+
+#allChats {
+	margin: 20px 0 20px 0;
+}
+
+.tab {
+	background-color: rgba(69,136,178,.4);
+	border: 1px solid rgba();
+	border-radius: 5px;
+	padding: 10px;
+	margin: 5px;
+}
+
+.message {
+	margin: 10px 0 0 28px;
+}
