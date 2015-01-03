@@ -1,3 +1,16 @@
+li {
+	list-style-type: none;
+}
+
+
+/* Helper Classes */
+.right {
+	text-align: right;
+	float: right;
+}
+
+/* Stylin' */
+
 .green {
 	color: green;
 	font-weight: 800;
@@ -6,10 +19,6 @@
 .blue {
 	color: blue;
 	font-weight: 800;
-}
-
-li {
-	list-style-type: none;
 }
 
 .carat {
@@ -34,18 +43,24 @@ li {
 	color: #fff;
 }
 
-#allChats {
+#body {
 	margin: 20px 0 20px 0;
 }
 
-.tab {
+.chat {
 	background-color: rgba(69,136,178,.4);
-	border: 1px solid rgba();
 	border-radius: 5px;
 	padding: 10px;
 	margin: 5px;
 }
 
-.message {
+.innerTab {
 	margin: 10px 0 0 28px;
+}
+
+.message {
+	background-color: green;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 5px;
 }

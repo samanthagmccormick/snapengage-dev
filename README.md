@@ -24,7 +24,7 @@ http://developer.snapengage.com/post-api/post-api/</h2>
 
 <h2>Technologies and Frameworks</h2>
 <ul>
-	<li>sBootstrap</li>
+	<li>Bootstrap</li>
 	<li>Node.js</li>
 	<li>Ajax for small requests to the database to display each chat's info instead of all chat info all at once</li>
 	<li>Express MVC</li>
