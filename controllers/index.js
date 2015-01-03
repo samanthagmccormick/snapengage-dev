@@ -45,19 +45,35 @@ var indexController = {
 			if (chats[i].transcript) {
 				console.log('there is a transcript');
 				for (var z = 0; z < chats[i].transcript.length; z++) {
-					// If there is an alias
-					if (chats[i].transcript[z].alias) {
-						console.log('there is an alias');
+					// If there is an agent in the message
+					if (chats[i].transcript[z].id) {
+
+						// Get info about the agent and about this particular chat
+						var agentID = chats[i].transcript[z].id;
 						var agentAlias = chats[i].transcript[z].alias;
-						agents.push(agentAlias);
+						var agentWait = chats[i].chat_waittime;
+						var agentDuration = chats[i].chat_duration;
+						var agentScore = chats[i].survey_score;
+						var agentComments = chats[i].survey_comments;
+
+						// Push to the array
+						agents.push({
+									id: agentID,
+									alias: agentAlias,
+									waittime: agentWait,
+									chatDuration: agentDuration,
+									chatScore: agentScore,
+									chatComments: agentComments
+								});
+						break;
+
 					}
 				}
 			}
 		}
-		var uniqueAgents = _.uniq(agents);
 
-		// Send the found agents to the client
-		res.send(uniqueAgents);
+		// Send the found agents to the client so that you can manipulate the data
+		res.send(agents);
 	}
 
 }; // end
