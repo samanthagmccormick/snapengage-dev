@@ -1,6 +1,25 @@
 /* Client-side jQuery & Ajax requests */
 
-// Functions
+
+////////////
+// Objects//
+////////////
+
+var Agent = function(alias, numberOfChats, waittime, chatDuration, chatScore, chatComments, avgWaittime, avgChatduration, avgChatscore) {
+	this.alias = alias;
+	this.numberOfChats = numberOfChats;
+	this.waittime = waittime;
+	this.chatDuration = chatDuration;
+	this.chatScore = chatScore;
+	this.chatComments = chatComments;
+	this.avgWaittime = avgWaittime;
+	this.avgChatduration = avgChatduration;
+	this.avgChatscore = avgChatscore;
+};
+
+//////////////
+// Functions//
+//////////////
 
 var searchByID = function(itemClicked, id, responseData) {
 		// console.log('SEARCH BY ID is working');
@@ -46,6 +65,21 @@ var printChats = function(responseData, style) {
 			$('#body').append('<li class = "'+ style + '" id=' + responseData[i].id + '><i class= "fa fa-sort-down carat closeCarat"></i><span class= "heading">' + responseData[i].description + '</span></li>');
 		}
 };
+
+var printAgents = function(responseData) {
+	// Loop through the array of agents and append to the page
+	for (var i = 0; i < responseData.length; i++) {
+		$('#body').append('<div id="' + responseData[i] + '" class="col-lg-3 col-md-3 col-sm-3 col-xs-12 innerTab agentBlock center"><img src="http://www.placesheen.com/150/150" class="img-circle img img-responsive center"/><p><br />' + responseData[i] + '</p></div>');
+	}
+};
+
+var average = function(total, quantity) {
+	return (total / quantity);
+};
+
+///////////////////////////
+//Event Handlers & Ajax //
+///////////////////////////
 
 $(function(){
 
@@ -139,6 +173,38 @@ $(function(){
 
 		$.get('/loadAgents', {}, function(responseData) {
 			console.log(responseData);
+
+			// Get list of unique agent IDs
+			var agentIDs = _.uniq(_.pluck(responseData, 'id'));
+
+			printAgents(agentIDs);
+
+			$(document).on('click', '.agentBlock', function() {
+				console.log('you clicked the agent block');
+
+				// Get the ID of the agent you clicked
+				var agentID = $(this).attr('id');
+
+				var showAgent = new Agent("", 0, 0, 0, 0, [], 0, 0, 0);
+
+				for (var i = 0; i < responseData.length; i++) {
+					if (agentID === responseData[i].id) {
+						showAgent.alias = responseData[i].alias;
+						showAgent.numberOfChats += 1;
+						showAgent.waittime += responseData[i].waittime;
+						showAgent.chatDuration += responseData[i].chatDuration;
+						showAgent.chatScore += responseData[i].chatScore;
+						// showAgent.chatComments.push(responseData[i].chatComments);  
+					}
+				}
+
+				showAgent.avgWaittime = average(showAgent.waittime, showAgent.numberOfChats);
+				showAgent.avgChatduration = average(showAgent.chatDuration, showAgent.numberOfChats);
+				showAgent.avgChatScore = average(showAgent.chatScore, showAgent.numberOfChats);
+
+				console.log(showAgent);
+			});
+
 		});
 
 	});

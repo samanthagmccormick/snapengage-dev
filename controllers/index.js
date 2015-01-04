@@ -66,7 +66,6 @@ var indexController = {
 									chatComments: agentComments
 								});
 						break;
-
 					}
 				}
 			}
