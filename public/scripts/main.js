@@ -95,6 +95,10 @@ $(function(){
 
 	// console.log('This is a test of the jquery file!');
 
+	$.get('/api', {}, function(responseData) {
+		console.log(responseData);
+	});
+
 	$('#home').on('click', function() {
 		$('#welcome').show();
 

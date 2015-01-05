@@ -6,6 +6,11 @@ var indexController = {
 	index: function(req, res) {
 		res.render('index');
 	},
+	api: function(req, res) {
+		var data = [];
+
+		
+	},
 	allChats: function(req, res) {
 		// Test to see if the json file sends the chats data to your terminal
 		// console.log(chats);
