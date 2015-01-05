@@ -19,6 +19,7 @@ app.get('/loadMessages', indexController.loadMessages);
 // Tab to view agent data
 app.get('/loadAgents', indexController.loadAgents);
 
-var server = app.listen(8080, function() {
+var port = process.env.PORT || 8080;
+var server = app.listen(port, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });

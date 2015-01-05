@@ -4,5 +4,8 @@
     "express": "^4",
     "jade": "^1",
     "underscore": "^1.7.0"
+  },
+  "scripts": {
+  	"start": "node app.js"
   }
 }
