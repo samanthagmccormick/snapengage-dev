@@ -4,7 +4,6 @@ var indexController = require('./controllers/index.js');
 var _ = require('underscore');
 
 var chats = require('./models/sample-chat-data.json');
-var Agent = require('./models/agentObject.js');
 
 var app = express();
 app.set('view engine', 'jade');

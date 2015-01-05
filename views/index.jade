@@ -6,17 +6,28 @@ block content
 
 		ul.nav.nav-tabs
 			li.tab.active
+				a(href='#')#home Home
+			li.tab
 				a(href='#')#loadChats Chat Transcripts
 			li.tab
 				a(href='#')#loadMessages Open Messages
 			li.tab
 				a(href='#')#loadAgents Agents
 			li.tab
-				a(href='#')#loadURLs Referral URLs
-
-		.row
-			.col-lg-12.col-md-12.col-sm-12.col-xs-12
-				ul#body
-
-
+				a(href='#')#loadAllData All Data
 		
+		.row.openTab
+			.col-lg-12.col-md-12.col-sm-12.col-xs-12
+				div#welcome
+					h3.centerText.innerTab Welcome to your dashboard!
+				div#body
+				div#myModal.modal.fade.in(tabindex="-1" role="dialog")
+					div.modal-body.center
+						h3 Agent Stats
+						div#picture
+						h4#title
+						h5#numberOfChats
+						h5#avgWaittime
+						h5#avgChatduration
+						h5#avgChatscore
+						h5#chatComments
