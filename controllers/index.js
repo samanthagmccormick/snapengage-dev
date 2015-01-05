@@ -1,44 +1,33 @@
 // Require your chat data file
 var chats = require('../models/sample-chat-data.json');
+var Chat = require('../models/chatSchema.js');
 var _ = require('underscore');
 
 var indexController = {
 	index: function(req, res) {
 		res.render('index');
 	},
-	api: function(req, res) {
-		console.log('API data: ', req.body);
-	},
+	// api: function(req, res) {
+	// 	console.log('API data: ', req.body);
+	// 	res.render('index');
+	// },
 	allChats: function(req, res) {
-		// Test to see if the json file sends the chats data to your terminal
-		// console.log(chats);
 
-		// Send the chats json data to the client
-		// res.send(chats);
+		// Just find the CHATS and send those to the client
+		Chat.find({type: "chat"}, function(err, results) {
+			// console.log('these are the results from teh server: ', results);
+			res.send(results);
+		});
 
-		var data = [];
-
-		console.log(chats[0]);
-
-		for (var i = 0; i < chats.length; i++){
-			// Only want to send the chats that have transcripts.
-			if (chats[i].transcript) {
-				data.push(chats[i]);
-			}
-		}
-
-		res.send(data);
 	},
 	loadMessages: function(req, res) {
-		var data = [];
 
-		for (var i = 0; i < chats.length; i++){
-			// Only want to send the transcript-less chats (i.e. open messages)
-			if (!chats[i].transcript) {
-				data.push(chats[i]);
-			}
-		}
-		res.send(data);
+		// Just find the MESSAGES and send those to the client
+		Chat.find({type: "offline"}, function(err, results) {
+			console.log('these are the results from teh server: ', results);
+			res.send(results);
+		});
+
 	},
 	loadAgents: function(req, res) {
 		var agents = [];

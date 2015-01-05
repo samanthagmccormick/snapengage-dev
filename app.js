@@ -5,6 +5,13 @@ var _ = require('underscore');
 
 var chats = require('./models/sample-chat-data.json');
 
+var mongoose = require('mongoose');
+// Connect to your mongodb database (collection is called "sampleChats")
+mongoose.connect('mongodb://localhost/snapengage-db');
+
+// seed teh database!
+require('./models/chatSeed.js');
+
 var app = express();
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
@@ -19,7 +26,7 @@ app.get('/loadMessages', indexController.loadMessages);
 // Tab to view agent data
 app.get('/loadAgents', indexController.loadAgents);
 // Open API
-app.get('/api', indexController.api);
+// app.get('/api', indexController.api);
 
 var port = process.env.PORT || 8080;
 var server = app.listen(port, function() {

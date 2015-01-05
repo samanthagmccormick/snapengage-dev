@@ -41,12 +41,12 @@ var searchByID = function(itemClicked, id, responseData) {
 		// Go thru the responseData and look for the ID of what you clicked. 
 		for (var i = 0; i < responseData.length; i++) {
 			if (id === responseData[i].id) {
-				// console.log('Found it: ', responseData[i]);
+				console.log('Found it: ', responseData[i]);
 
 				var itemFound = responseData[i];
 				
 				// If the item has a transcript
-				if (itemFound.transcript) {
+				if (itemFound.type === "chat") {
 					// Remove the innerTab's contents 
 					itemClicked.closest('li').find('.innerTab').remove();
 
@@ -58,7 +58,10 @@ var searchByID = function(itemClicked, id, responseData) {
 							itemClicked.closest('li').append('<div class="row"><div class="innerTab"><p><span class="blue">' + itemFound.transcript[z].alias + ' (' + itemFound.transcript[z].id + ')'  + ': </span>' + itemFound.transcript[z].message + '</p></div>');
 						}
 					} // end for loop
+				// If the item DOESN'T have a transcript
 				} else {
+
+					console.log('this is the found item', itemFound);
 					// Remove the innerTab's contents 
 					itemClicked.closest('li').find('.innerTab').remove();
 
@@ -95,23 +98,20 @@ $(function(){
 
 	// console.log('This is a test of the jquery file!');
 
-	$.get('/api', {}, function(responseData) {
-		console.log(responseData);
-	});
-
-	$('#home').on('click', function() {
-		$('#welcome').show();
-
-		// Clear out the body
-		$('#body').children().remove();
-	});
-
 	// Nav bar
 	$('.tab').on('click', function() {
 		// Remove 'active' from all tabs
 		$('.tab').removeClass('active');
 		// Add 'active' to THIS tab
 		$(this).addClass('active');
+	});
+
+	// "Welcome" tab
+	$('#home').on('click', function() {
+		$('#welcome').show();
+
+		// Clear out the body
+		$('#body').children().remove();
 	});
 
 	// Tab to load all chats
@@ -123,9 +123,9 @@ $(function(){
 		$('#body').children().remove();
 
 		$.get('/allChats', {}, function(responseData){
-			// console.log('get request works, getting chats data from the file');
+			console.log('get request works, getting chats data from the file');
 			// Print the chats json data to the client's console
-			// console.log('responseData:', responseData);
+			console.log('responseData:', responseData);
 
 			printChats(responseData, "chat");
 
@@ -141,7 +141,6 @@ $(function(){
 
 				var carat = $(this);
 				searchByID(carat, ID, responseData);
-				// printTranscripts(carat, searchByID(carat, ID, responseData));
 			}); // end closeCarat click handler
 
 			$(document).on('click', '.openCarat', function(){
@@ -173,7 +172,7 @@ $(function(){
 
 				// Get the ID of what you clicked
 				var ID = $(this).closest('li').attr('id');
-				// console.log('ID of what you clicked: ', ID);
+				console.log('ID of what you clicked: ', ID);
 
 				var carat = $(this);
 				searchByID(carat, ID, responseData);
