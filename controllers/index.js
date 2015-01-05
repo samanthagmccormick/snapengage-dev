@@ -7,9 +7,7 @@ var indexController = {
 		res.render('index');
 	},
 	api: function(req, res) {
-		var data = [];
-
-		
+		console.log('API data: ', req.body);
 	},
 	allChats: function(req, res) {
 		// Test to see if the json file sends the chats data to your terminal
