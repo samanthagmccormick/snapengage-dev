@@ -13,7 +13,7 @@ var indexController = {
 	// },
 	allChats: function(req, res) {
 
-		// Just find the CHATS and send those to the client
+		// Find only the CHATS and send those to the client
 		Chat.find({type: "chat"}, function(err, results) {
 			// console.log('these are the results from teh server: ', results);
 			res.send(results);
@@ -22,7 +22,7 @@ var indexController = {
 	},
 	loadMessages: function(req, res) {
 
-		// Just find the MESSAGES and send those to the client
+		// Find only the MESSAGES and send those to the client
 		Chat.find({type: "offline"}, function(err, results) {
 			console.log('these are the results from teh server: ', results);
 			res.send(results);
@@ -30,25 +30,29 @@ var indexController = {
 
 	},
 	loadAgents: function(req, res) {
+
+		// Array to store agents
 		var agents = [];
 
-		for (var i = 0; i < chats.length; i++) {
-			// If chat has a transcript then you can get the agent's name
-			if (chats[i].transcript) {
-				console.log('there is a transcript');
-				for (var z = 0; z < chats[i].transcript.length; z++) {
+		// Scroll through only the CHATS
+		Chat.find({type: "chat"}, function(err, results) {
+
+			// Scroll through the array of chat results
+			for (var i = 0; i < results.length; i++) {
+				// Scroll through the array of transcripts 
+				for (var z = 0; z < results[z].transcript.length; z++) {
 					// If there is an agent in the message
-					if (chats[i].transcript[z].id) {
+					if (results[i].transcript[z].id) {
 
 						// Get info about the agent and about this particular chat
-						var agentID = chats[i].transcript[z].id;
-						var agentAlias = chats[i].transcript[z].alias;
-						var agentWait = chats[i].chat_waittime;
-						var agentDuration = chats[i].chat_duration;
-						var agentScore = chats[i].survey_score;
-						var agentComments = chats[i].survey_comments;
+						var agentID = results[i].transcript[z].id;
+						var agentAlias = results[i].transcript[z].alias;
+						var agentWait = results[i].chat_waittime;
+						var agentDuration = results[i].chat_duration;
+						var agentScore = results[i].survey_score;
+						var agentComments = results[i].survey_comments;
 
-						// Push to the array
+						// Push to the array, "agents"
 						agents.push({
 									id: agentID,
 									alias: agentAlias,
@@ -61,10 +65,9 @@ var indexController = {
 					}
 				}
 			}
-		}
-
-		// Send the found agents to the client so that you can manipulate the data
-		res.send(agents);
+			// Send the agents over to the client
+			res.send(agents);
+		});
 	}
 
 }; // end

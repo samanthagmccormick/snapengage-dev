@@ -194,7 +194,7 @@ $(function(){
 		$('#body').children().remove();
 
 		$.get('/loadAgents', {}, function(responseData) {
-			console.log(responseData);
+			console.log('The agents: ', responseData);
 
 			// Get list of unique agent IDs
 			var agentIDs = _.uniq(_.pluck(responseData, 'id'));
@@ -206,6 +206,7 @@ $(function(){
 
 				// Get the ID of the agent you clicked
 				var agentID = $(this).attr('id');
+				
 				// Get the image and save
 				var agentPicture = $(this).find('img').attr('src');
 				console.log(agentPicture);
