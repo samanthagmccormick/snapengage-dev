@@ -7,7 +7,7 @@ var chats = require('./models/sample-chat-data.json');
 
 var mongoose = require('mongoose');
 // Connect to your mongodb database (collection is called "sampleChats")
-mongoose.connect('process.env.MONGOLAB_URI || mongodb://localhost/snapengage-db');
+mongoose.connect('process.env.MONGOHQ_URL || mongodb://localhost/snapengage-db');
 
 // seed teh database!
 require('./models/chatSeed.js');
