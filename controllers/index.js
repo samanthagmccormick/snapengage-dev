@@ -11,7 +11,7 @@ var indexController = {
 
 		console.log('API data: ', req.body);
 		res.send(JSON.parse(req.body));
-		res.render('index');
+		res.json({message: "yes! welcome to the API"});
 
 	},
 	allChats: function(req, res) {
