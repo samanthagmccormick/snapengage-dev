@@ -10,12 +10,15 @@ var indexController = {
 	api: function(req, res) {
 
 		// console.log('API data: ', req.body);
-		console.log('GET request test: ', req.params);
+		console.log('GET request test: ', req.body);
+		console.log('GET request test with res.body ', res.body);
 		res.json({message: "yes! welcome to the API"});
 
 	},
 	apiPost: function(req, res) {
-		console.log('POST request test: ', req.params);
+		console.log('POST request test: ', req.body);
+		console.log('POST request test with res.body ', res.body);
+
 	},
 	allChats: function(req, res) {
 
