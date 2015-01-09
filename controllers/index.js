@@ -9,10 +9,8 @@ var indexController = {
 	},
 	api: function(req, res) {
 
-		var data = res.body;
-		console.log('API data: ', data);
-		res.render('index');
-		res.send(data);
+		console.log('API data: ', req.body);
+		res.send(200);
 	},
 	allChats: function(req, res) {
 
