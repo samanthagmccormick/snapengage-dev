@@ -7,10 +7,12 @@ var indexController = {
 	index: function(req, res) {
 		res.render('index');
 	},
-	// api: function(req, res) {
-	// 	console.log('API data: ', req.body);
-	// 	res.render('index');
-	// },
+	api: function(req, res) {
+
+		var description = res.description;
+		console.log('API data: ', description);
+		res.render('index');
+	},
 	allChats: function(req, res) {
 
 		// Find only the CHATS and send those to the client
