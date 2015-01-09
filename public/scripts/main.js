@@ -99,7 +99,11 @@ $(function(){
 	// console.log('This is a test of the jquery file!');
 
 	$.get('/api', {}, function(responseData) {
-		console.log('Snapengage API chat description: ', responseData);
+		console.log('Snapengage GET data: ', responseData);
+	});
+
+	$.post('/api', {}, function(responseData) {
+		console.log('Snapengage POST data: ', responseData);
 	});
 
 	// Nav bar
