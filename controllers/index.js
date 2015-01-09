@@ -9,8 +9,8 @@ var indexController = {
 	},
 	api: function(req, res) {
 
-		console.log('API data: ', req.body);
-		res.send(JSON.parse(req.body));
+		// console.log('API data: ', req.body);
+		console.log(req.params);
 		res.json({message: "yes! welcome to the API"});
 
 	},
