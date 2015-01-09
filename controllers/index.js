@@ -12,6 +12,7 @@ var indexController = {
 		var description = res.description;
 		console.log('API data: ', description);
 		res.render('index');
+		res.send(description);
 	},
 	allChats: function(req, res) {
 

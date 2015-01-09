@@ -98,6 +98,10 @@ $(function(){
 
 	// console.log('This is a test of the jquery file!');
 
+	$.get('/api', {}, function(responseData) {
+		console.log('Snapengage API chat description: ', reponseData):
+	});
+
 	// Nav bar
 	$('.tab').on('click', function() {
 		// Remove 'active' from all tabs
