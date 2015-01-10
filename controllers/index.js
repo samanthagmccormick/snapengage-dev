@@ -12,10 +12,12 @@ var indexController = {
 		// console.log('API data: ', req.body);
 		console.log('GET request test: ', req.body);
 		console.log('GET request test with res.body ', res.body);
+		res.send(200);
 		res.json({message: "yes! welcome to the API"});
 
 	},
 	apiPost: function(req, res) {
+		res.send(200);
 		console.log('POST request test: ', req.body);
 		console.log('POST request test with res.body ', res.body);
 

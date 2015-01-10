@@ -106,6 +106,11 @@ $(function(){
 		console.log('Snapengage POST data: ', responseData);
 	});
 
+	$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
+		method: 'GET'}).then(function(data) {
+		console.log(data);
+	});
+
 	// Nav bar
 	$('.tab').on('click', function() {
 		// Remove 'active' from all tabs
