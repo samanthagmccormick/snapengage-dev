@@ -18,7 +18,10 @@ var indexController = {
 
 	},
 	apiPost: function(req, res) {
-		res.send(req.body);
+		var data = req.body;
+		var jsonData = [];
+		jsonData.push(data);
+		res.send(jsonData);
 		res.render('index');
 		console.log('POST request test: ', req.body);
 		console.log('POST request test with res.body ', res.body);
