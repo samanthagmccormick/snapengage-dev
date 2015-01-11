@@ -13,7 +13,7 @@ var indexController = {
 		console.log('GET request test: ', req.body);
 		console.log('GET request test with res.body ', res.body);
 		res.send(req.body);
-		res.render('index');
+		// res.render('index');
 		res.json({message: "yes! welcome to the API"});
 
 	},
@@ -22,7 +22,7 @@ var indexController = {
 		var jsonData = [];
 		jsonData.push(data);
 		res.send(jsonData);
-		res.render('index');
+		// res.render('index');
 		console.log('POST request test: ', req.body);
 		console.log('POST request test with res.body ', res.body);
 
