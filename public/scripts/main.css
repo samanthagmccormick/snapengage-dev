@@ -1,3 +1,5 @@
+/* Root Styles */
+
 li {
 	list-style-type: none;
 }
@@ -9,7 +11,6 @@ body {
 h1 {
 	margin: 30px 0px;
 }
-
 
 /* Helper Classes */
 .right {
@@ -42,7 +43,15 @@ h1 {
 	font-weight: 800;
 }
 
+.link {
+	color: #2D5B9E;
+}
+
 /* Tab Styles */
+
+.innerTab {
+	margin-left: 27px;
+}
 
 .innerTab > p , .innerTab > form {
 	margin: 10px 0px 0px 43px;
@@ -85,25 +94,36 @@ h1 {
 }
 
 .chat {
-	background-color: rgba(69,136,178,.6);
+	background-color: #5E97BC;
+	color: rgba(8,31,48,.8);
 	border-radius: 5px;
 	padding: 10px;
 	margin: 5px;
 }
 
 .message {
-	background-color: rgba(8,31,48,.8);
+	background-color: #203B4E;
 	color: rgba(69,136,178,1);
 	border-radius: 5px;
 	padding: 10px;
 	margin: 5px;
 }
 
+.transcript {
+	font-size: 1.2em;
+	padding: 10px 0 10px 20px;
+	margin-top: 10px;
+}
+
+.details {
+	font-size: .9em;
+	margin-top: 20px;
+}
+
 /* Agent Styles */
 
 .agentBlock {
 	padding: 20px 10px;
-	border-radius: 10px;
 	font-weight: 500;
 }
 
@@ -112,7 +132,9 @@ h1 {
 	background: none;
 }*/
 
-
+.img-circle {
+	border: 5px solid #5E97BC;
+}
 
 /* Modal Styling */
 

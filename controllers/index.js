@@ -68,6 +68,8 @@ var indexController = {
 						var agentScore = results[i].survey_score;
 						var agentComments = results[i].survey_comments;
 
+						console.log(agentComments);
+
 						// Push to the array, "agents"
 						agents.push({
 									id: agentID,
@@ -83,6 +85,12 @@ var indexController = {
 			}
 			// Send the agents over to the client
 			res.send(agents);
+		});
+	},
+	loadAllData: function(req, res) {
+		// Scroll through and send along all chat data
+		Chat.find({}, function(err, results) {
+			res.send(results);
 		});
 	}
 

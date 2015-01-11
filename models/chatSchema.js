@@ -20,6 +20,7 @@ var chatSchema = mongoose.Schema({
 	chat_waittime: Number,
 	chat_duration: Number,
 	survey_score: Number,
+	survey_comments: String,
 	language_code: String,
 	transcript: [
 		{

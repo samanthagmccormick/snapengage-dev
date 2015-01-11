@@ -7,7 +7,7 @@ var chats = require('./models/sample-chat-data.json');
 
 var mongoose = require('mongoose');
 // Connect to your mongodb database (collection is called "sampleChats")
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/snapengage-db');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/snapengageDB');
 
 // seed teh database!
 require('./models/chatSeed.js');
@@ -25,6 +25,8 @@ app.get('/allChats', indexController.allChats);
 app.get('/loadMessages', indexController.loadMessages);
 // Tab to view agent data
 app.get('/loadAgents', indexController.loadAgents);
+// Tab to view chart of all data
+app.get('/loadAllData', indexController.loadAllData);
 // Open API
 // app.get('/api', indexController.api);
 // app.post('/api', indexController.apiPost);
