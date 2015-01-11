@@ -26,8 +26,8 @@ app.get('/loadMessages', indexController.loadMessages);
 // Tab to view agent data
 app.get('/loadAgents', indexController.loadAgents);
 // Open API
-app.get('/api', indexController.api);
-app.post('/api', indexController.apiPost);
+// app.get('/api', indexController.api);
+// app.post('/api', indexController.apiPost);
 
 var port = process.env.PORT || 8080;
 var server = app.listen(port, function() {

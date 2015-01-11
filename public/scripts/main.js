@@ -99,18 +99,18 @@ $(function(){
 	// console.log('This is a test of the jquery file!');
 
 
-	$.get('/api', {}, function(responseData) {
-		console.log('Snapengage GET data: ', responseData);
-	});
+	// $.get('/api', {}, function(responseData) {
+	// 	console.log('Snapengage GET data: ', responseData);
+	// });
 
-	$.post('/api', {}, function(responseData) {
-		console.log('Snapengage POST data: ', responseData);
-	});
+	// $.post('/api', {}, function(responseData) {
+	// 	console.log('Snapengage POST data: ', responseData);
+	// });
 
-	$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
-		method: 'GET'}).then(function(data) {
-		console.log(data);
-	});
+	// $.ajax('http://jsonplaceholder.typicode.com/posts/1', {
+	// 	method: 'GET'}).then(function(data) {
+	// 	console.log(data);
+	// });
 
 	// Nav bar
 	$('.tab').on('click', function() {

@@ -7,26 +7,26 @@ var indexController = {
 	index: function(req, res) {
 		res.render('index');
 	},
-	api: function(req, res) {
+	// api: function(req, res) {
 
-		// console.log('API data: ', req.body);
-		console.log('GET request test: ', req.body);
-		console.log('GET request test with res.body ', res.body);
-		res.send(req.body);
-		// res.render('index');
-		res.json({message: "yes! welcome to the API"});
+	// 	// console.log('API data: ', req.body);
+	// 	console.log('GET request test: ', req.body);
+	// 	console.log('GET request test with res.body ', res.body);
+	// 	res.send(req.body);
+	// 	// res.render('index');
+	// 	res.json({message: "yes! welcome to the API"});
 
-	},
-	apiPost: function(req, res) {
-		var data = req.body;
-		var jsonData = [];
-		jsonData.push(data);
-		res.send(jsonData);
-		// res.render('index');
-		console.log('POST request test: ', req.body);
-		console.log('POST request test with res.body ', res.body);
+	// },
+	// apiPost: function(req, res) {
+	// 	var data = req.body;
+	// 	var jsonData = [];
+	// 	jsonData.push(data);
+	// 	res.send(jsonData);
+	// 	// res.render('index');
+	// 	console.log('POST request test: ', req.body);
+	// 	console.log('POST request test with res.body ', res.body);
 
-	},
+	// },
 	allChats: function(req, res) {
 
 		// Find only the CHATS and send those to the client
