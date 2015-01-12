@@ -5,7 +5,7 @@ var _ = require('underscore');
 
 // Mongoose / MongoDB stuff
 var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/snapengageDB');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/snapengage-db');
 
 // seed the database
 require('./models/chatSeed.js');
