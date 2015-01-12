@@ -2,38 +2,33 @@ extends layout
 
 block content
 	.container
-		h1 My Snapengage Dashboard
+		img(src="/images/snapengage-logo.png" class="heading")
+		h1.header.title My Dashboard
 
 		ul.nav.nav-tabs
 			li.tab.active
-				a(href='/#')#home Home
+				a(href='/#')#home
+					i.fa.fa-home
+					|  Home
 			li.tab
-				a(href='/#')#loadChats Chat Transcripts
+				a(href='/#')#loadChats
+					i.fa.fa-comment
+					|  Chat Transcripts
 			li.tab
-				a(href='/#')#loadMessages Open Messages
+				a(href='/#')#loadMessages
+					i.fa.fa-envelope-o
+					|  Open Messages
+
 			li.tab
-				a(href='/#')#loadAgents Agents
-			li.tab
-				a(href='/#')#loadAllData All Data
+				a(href='/#')#loadAgents
+					i.fa.fa-user
+					|  Agents
 		
 		.row.openTab
 			.col-lg-12.col-md-12.col-sm-12.col-xs-12
 				div#welcome
 					h3.centerText.innerTab Welcome to your dashboard!
 				div#body
-				div#table
-					div(ng-app="myApp" class="container")
-						input(type="text" placeholder="Search Users" ng-model="search.$")
-						table(ng-controller="TableCtrl")
-							thead
-								tr
-									th(id="name") Name
-									th(id="name") Gender
-									th(id="name") Age
-									th(id="name") Email
-									th(id="name") Phone
-									th(id="name") Location
-							//- tbody(id="tbody")
 				div#myModal.modal.fade.in(tabindex="-1" role="dialog")
 					div.modal-body.center
 						h3 Agent Stats

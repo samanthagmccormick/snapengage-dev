@@ -10,26 +10,34 @@
 http://help.snapengage.com/how-to-integrate-snapengage-with-your-open-api/
 http://developer.snapengage.com/post-api/post-api/</h2>
 
-<h2>Features</h2>
+<h2>Sam's Features!</h2>
 <ul>
-	<li>User Dashboard (no login though)</li>
+	<li>User Dashboard</li>
 		<ul>
-			<li>Display chats by website (account) - circular display? d3?</li>
-			<li>Once you click into an account, you can see all the chats listed by date</li>
-			<li>Green for resolved, red for unresolved</li>
+			<li>Chats tab: displays all CHATS by description (user's first message)</li>
+			<li>Messages tab: displays all OPEN MESSAGES by description</li>
+				<ul>
+					<li>FUTURE: Hook up the form to actually be able to send emails thru the dashboard.</li>
+				</ul>
+			<li>Agents tab: displays all AGENTS. Click on an agent to view all details about their chats and stats</li>
+			<li>FUTURE: Users tab displays all USERS (chatters). Allows you to view all chats/messages by user.</li>
+			<li>FUTURE: All Data tab that uses Angular to display a chart of all data that you can instantly search and filter thru ALL chats/messages</li>
 		</ul>
-	<li>User can mark a chat as "RESOLVED", write notes for a chat, or delete a chat</li>
-	<li>User can search through their chats (use Angular)</li>
+	<li>FUTURE: Editing capabilities, using the MongoDB database. You can mark a chat as "RESOLVED" to delete or archive it, write notes for a chat, or delete a chat</li>
+	<li>FUTURE: Use the Snapengage API to send chat data, store in this MongoDB database, and display later on.</li>
 </ul>
 
-<h2>Technologies and Frameworks</h2>
+<h2>Technologies, Frameworks, and Libraries</h2>
 <ul>
-	<li>Bootstrap</li>
-	<li>Node.js</li>
-	<li>Ajax for small requests to the database to display each chat's info instead of all chat info all at once</li>
-	<li>Express MVC</li>
+	<li>Express MVC to separate models-views-controllers</li>
+	<li>Jade for server side HTML templating</li>
+	<li>Node.js for server side JS</li>
+	<li>Mongoose / MongoDB for the server database, mainly set this up for using the API in the future</li>
+	<li>Ajax for small requests to the database to display each chat's info instead of all chat info all at once which would be a big payload if it was a lot of info</li>
 	<li>Heroku for the server / live demo</li>
-	<li>Angular for searching/sorting</li>
+	<li>Github for code</li>
+	<li>Bootstrap for styling</li>
+	<li>Underscore for some light data manipulation</li>
 </ul>
 
 

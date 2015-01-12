@@ -1,15 +1,3 @@
-/* Client-side jQuery & Ajax requests */
-
-var agentPictures = [
-	'mattsmith.jpg',
-	'amypond.png',
-	'arya.jpg',
-	'goffrey.png',
-	'hodor.png',
-	'jonsnow.jpg',
-	'khaleesi.png',
-	'nedstark.jpg'
-];
 
 ////////////
 // Objects//
@@ -29,19 +17,15 @@ var Agent = function(id, picture, alias, numberOfChats, waittime, chatDuration, 
 	this.avgChatscore = avgChatscore;
 };
 
-
-
-
-
 //////////////
 // Functions//
 //////////////
 
 var searchByID = function(itemClicked, id, responseData) {
 		// console.log('SEARCH BY ID is working');
-
 		// console.log('responseData: ', responseData);
 		// console.log('id: ', id);
+
 		// Go thru the responseData and look for the ID of what you clicked. 
 		for (var i = 0; i < responseData.length; i++) {
 			if (id === responseData[i].id) {
@@ -55,7 +39,7 @@ var searchByID = function(itemClicked, id, responseData) {
 				// Append the chat's details to the 'details' column
 				itemClicked.closest('li').find('.details').append('<p><span class="bold">User: </span><a class="link" href="mailto:' + itemFound.requested_by + '">' + itemFound.requested_by + '</a><br /><span class="bold">IP: </span>' + itemFound.ip_address + '<br /><span class="bold">Location: </span>' + itemFound.city + ', ' + itemFound.region + ', ' + itemFound.country + '<br /><span class="bold">Chat Occured: </span><a class="link" href="' + itemFound.page_url + '">View Webpage</a><br /><span class="bold">Waittime: </span>' + itemFound.chat_waittime + ' seconds<br /><span class="bold">Duration: </span>' + itemFound.chat_duration + ' seconds</p><p><a class="link btn btn-md btn-primary" href="' + itemFound.url + '">View Case Webpage</a></p>');
 				
-				// If the item has a transcript
+				// If the item HAS a transcript
 				if (itemFound.type === "chat") {
 
 					for (var z = 0; z < itemFound.transcript.length; z++) {
@@ -73,7 +57,7 @@ var searchByID = function(itemClicked, id, responseData) {
 					console.log('this is the found item', itemFound);
 
 					// There is no chat transcript, so just list the MESSAGE
-					itemClicked.closest('li').find('.transcript').append('<form class="col-lg-11 col-md-11 col-sm-11 col-sm-8"><div class = "form-group"><label>Write your message below: </label><textarea name = "email" class="form-control" rows="3"></textarea><p><button class="btn btn-primary">Send</button></p></div></form>');
+					itemClicked.closest('li').find('.transcript').append('<form class="col-lg-11 col-md-11 col-sm-11 col-sm-8"><div class = "form-group"><label>Write your response below: </label><textarea placeholder="Future feature would be to hook this up to email" name = "email" class="form-control" rows="3"></textarea><p class="right margin-top"><button class="btn btn-success">Send</button></p></div></form>');
 				} // end if statement
 			}
 		}
@@ -105,28 +89,28 @@ var average = function(total, quantity) {
 	return (total / quantity);
 };
 
+////////////////
+// Agent Pics //
+////////////////
+
+var agentPictures = [
+	'mattsmith.jpg',
+	'amypond.png',
+	'arya.jpg',
+	'goffrey.png',
+	'hodor.png',
+	'jonsnow.jpg',
+	'khaleesi.png',
+	'nedstark.jpg'
+];
+
 ///////////////////////////
 // Event Handlers & Ajax //
 ///////////////////////////
 
 $(function(){
 
-
 	// console.log('This is a test of the jquery file!');
-
-
-	// $.get('/api', {}, function(responseData) {
-	// 	console.log('Snapengage GET data: ', responseData);
-	// });
-
-	// $.post('/api', {}, function(responseData) {
-	// 	console.log('Snapengage POST data: ', responseData);
-	// });
-
-	// $.ajax('http://jsonplaceholder.typicode.com/posts/1', {
-	// 	method: 'GET'}).then(function(data) {
-	// 	console.log(data);
-	// });
 
 	// Nav bar
 	$('.tab').on('click', function() {
@@ -136,7 +120,7 @@ $(function(){
 		$(this).addClass('active');
 	});
 
-	// "Welcome" tab
+	// "Welcome/Home" tab
 	$('#home').on('click', function() {
 		$('#welcome').show();
 
@@ -170,6 +154,7 @@ $(function(){
 				// console.log('ID of what you clicked: ', ID);
 
 				var carat = $(this);
+
 				// Search by ID and then print the chat
 				searchByID(carat, ID, responseData);
 			}); // end closeCarat click handler
@@ -288,23 +273,6 @@ $(function(){
 		});
 
 	});
-
-	// Tab to load all data
-	$('#loadAllData').on('click', function() {
-
-		$('#welcome').hide();
-
-		// Clear out the body
-		$('#body').children().remove();
-
-		$.get('/loadAllData', {}, function(responseData){
-			console.log("all chat data: ", responseData);
-		});
-
-	});
-
-
-
 
 
 });  // end jQuery wrapper

@@ -1,5 +1,4 @@
 // Require your chat data file
-var chats = require('../models/sample-chat-data.json');
 var Chat = require('../models/chatSchema.js');
 var _ = require('underscore');
 
@@ -7,26 +6,6 @@ var indexController = {
 	index: function(req, res) {
 		res.render('index');
 	},
-	// api: function(req, res) {
-
-	// 	// console.log('API data: ', req.body);
-	// 	console.log('GET request test: ', req.body);
-	// 	console.log('GET request test with res.body ', res.body);
-	// 	res.send(req.body);
-	// 	// res.render('index');
-	// 	res.json({message: "yes! welcome to the API"});
-
-	// },
-	// apiPost: function(req, res) {
-	// 	var data = req.body;
-	// 	var jsonData = [];
-	// 	jsonData.push(data);
-	// 	res.send(jsonData);
-	// 	// res.render('index');
-	// 	console.log('POST request test: ', req.body);
-	// 	console.log('POST request test with res.body ', res.body);
-
-	// },
 	allChats: function(req, res) {
 
 		// Find only the CHATS and send those to the client
@@ -40,14 +19,14 @@ var indexController = {
 
 		// Find only the MESSAGES and send those to the client
 		Chat.find({type: "offline"}, function(err, results) {
-			console.log('these are the results from teh server: ', results);
+			// console.log('these are the results from teh server: ', results);
 			res.send(results);
 		});
 
 	},
 	loadAgents: function(req, res) {
 
-		// Array to store agents
+		// Array to temporarily store the agents
 		var agents = [];
 
 		// Scroll through only the CHATS
